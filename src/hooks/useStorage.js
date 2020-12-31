@@ -1,12 +1,12 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { projectStorage } from "../firebase/config";
 
-const uesStorage = (file) => {
-  const [progress, setProgress] = React.uesState(0);
-  const [error, setError] = React.uesState(null);
-  const [url, setUrl] = React.uesState(null);
+const useStorage = (file) => {
+  const [progress, setProgress] = useState(0);
+  const [error, setError] = useState(null);
+  const [url, setUrl] = useState(null);
 
-  React.uesEffect(() => {
+  useEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);
 
@@ -29,4 +29,4 @@ const uesStorage = (file) => {
   return { progress, url, error };
 };
 
-export default uesStorage;
+export default useStorage;
