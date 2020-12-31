@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import { projectStorage } from "../firebase/config";
 
 const uesStorage = (file) => {
-  const [progress, setProgress] = uesState(0);
-  const [error, setError] = uesState(null);
-  const [url, setUrl] = uesState(null);
+  const [progress, setProgress] = React.uesState(0);
+  const [error, setError] = React.uesState(null);
+  const [url, setUrl] = React.uesState(null);
 
-  uesEffect(() => {
+  React.uesEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);
 
