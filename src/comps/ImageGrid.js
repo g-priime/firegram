@@ -13,6 +13,7 @@ const ImageGrid = ({ setSelectedImg }) => {
           <motion.div
             className="img-wrap"
             key={doc.id}
+            layout
             whileHover={{ opacity: 1 }}
             onClick={() => setSelectedImg(doc.url)}
           >
