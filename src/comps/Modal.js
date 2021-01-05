@@ -23,6 +23,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
         animate={{ y: 0 }}
         */
       />
+      <div className="caption">Caption</div>
     </motion.div>
   );
 };
