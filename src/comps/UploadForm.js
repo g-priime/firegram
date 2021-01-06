@@ -13,7 +13,7 @@ const UploadForm = () => {
   const handleChange = (event) => {
     selectedLocation = event.target.value;
 
-    //console.log(selectedLocation);
+    console.log(selectedLocation);
   };
 
   const changeHandler = (e) => {
@@ -29,6 +29,7 @@ const UploadForm = () => {
     }
 
     console.log(file);
+    console.log(selectedLocation);
     console.log(location);
   };
 
@@ -44,7 +45,7 @@ const UploadForm = () => {
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
-        {file && <ProgressBar file={file} setFile={setFile} />}
+        {file && <ProgressBar file={file} setFile={setFile} location={location} />}
       </div>
     </form>
   );
