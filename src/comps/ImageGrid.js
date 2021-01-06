@@ -15,7 +15,7 @@ const ImageGrid = ({ setSelectedImg }) => {
             key={doc.id}
             layout
             whileHover={{ opacity: 1 }}
-            onClick={() => setSelectedImg(doc.url)}
+            onClick={() => setSelectedImg(doc)} /* changed from doc.url to doc */
           >
             <motion.img
               src={doc.url}
