@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Moment from "react-moment";
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
@@ -23,7 +24,9 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
         animate={{ y: 0 }}
         */
       />
-      <div className="caption">{selectedImg.createdAt.seconds}</div>
+      <div className="caption">
+        <Moment unix format="MMM DD, YYYY">{selectedImg.createdAt.seconds}</Moment>
+      </div>
     </motion.div>
   );
 };
