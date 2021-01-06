@@ -35,12 +35,12 @@ form {
   margin: 30px auto 10px;
   text-align: center;
 }
-label input {
+.file-input {
   height: 0;
   width: 0;
   opacity: 0;
 }
-label {
+label.file-label {
   display: block;
   width: 30px;
   height: 30px;
