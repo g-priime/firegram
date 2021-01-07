@@ -53,7 +53,7 @@ label.file-label {
   font-size: 24px;
 }
 .location-input {
-  position: fixed;
+  position: absolute;
   top: 38%;
   left: 40%;
   margin-top: 50px;
