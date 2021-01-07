@@ -37,7 +37,7 @@ const UploadForm = () => {
     } else {
       setError("Please enter a location");
     }
-    
+
     console.log(submitted);
   };
 
@@ -56,7 +56,13 @@ const UploadForm = () => {
           {error && <div className="error">{error}</div>}
           {file && <div>{file.name}</div>}
           {submitted && file && location && (
-            <ProgressBar file={file} setFile={setFile} location={location} />
+            <ProgressBar
+              file={file}
+              setFile={setFile}
+              location={location}
+              setLocation={setLocation}
+              setSubmitted={setSubmitted}
+            />
           )}
         </div>
       </form>
