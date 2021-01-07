@@ -45,17 +45,22 @@ const UploadForm = () => {
   return (
     <div>
       <form>
-        <label>
-          Location:{" "}
-          <input type="text" value={location} onChange={handleChange} />
-        </label>
         <label className="file-label">
           <input className="file-input" type="file" onChange={changeHandler} />
           <span>+</span>
         </label>
+
         <div className="output">
           {error && <div className="error">{error}</div>}
           {file && <div>{file.name}</div>}
+
+          <div className="location-input">
+            <label className="location-label">
+              Location:{" "}
+              <input type="text" value={location} onChange={handleChange} />
+            </label>
+          </div>
+
           {submitted && file && location && (
             <ProgressBar
               file={file}
@@ -67,7 +72,7 @@ const UploadForm = () => {
           )}
         </div>
       </form>
-      <button onClick={sendData}>Submit</button>
+      <button className="button" onClick={sendData}>Submit</button>
     </div>
   );
 };
