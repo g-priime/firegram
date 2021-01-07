@@ -14,6 +14,7 @@ const UploadForm = () => {
   const handleChange = (event) => {
     selectedLocation = event.target.value;
     setLocation(selectedLocation);
+    setError("");
   };
 
   const changeHandler = (e) => {
