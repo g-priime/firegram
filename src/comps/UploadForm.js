@@ -51,8 +51,8 @@ const UploadForm = () => {
         </label>
 
         <div className="output">
-          {error && <div className="error">{error}</div>}
           {file && <div>{file.name}</div>}
+          {error && <div className="error">{error}</div>}
 
           <div className="location-input">
             <label className="location-label">
@@ -72,7 +72,9 @@ const UploadForm = () => {
           )}
         </div>
       </form>
-      <button className="button" onClick={sendData}>Submit</button>
+      <button className="button" onClick={sendData}>
+        Submit
+      </button>
     </div>
   );
 };
