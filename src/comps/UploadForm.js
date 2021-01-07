@@ -29,7 +29,15 @@ const UploadForm = () => {
   };
 
   const sendData = () => {
-    setSubmitted(true);
+    if (file && location) {
+      setSubmitted(true);
+    } else if (!file) {
+      setFile(null);
+      setError("Please select an image file (png or jpeg)");
+    } else {
+      setError("Please enter a location");
+    }
+    
     console.log(submitted);
   };
 
