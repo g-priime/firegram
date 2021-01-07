@@ -4,16 +4,16 @@ import ProgressBar from "./ProgressBar";
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const types = ["image/png", "image/jpeg"];
 
-  let selectedLocation = "";
+  let selectedLocation = null;
 
   const handleChange = (event) => {
     selectedLocation = event.target.value;
-
-    console.log(selectedLocation);
+    setLocation(selectedLocation);
   };
 
   const changeHandler = (e) => {
@@ -21,33 +21,39 @@ const UploadForm = () => {
 
     if (selected && types.includes(selected.type)) {
       setFile(selected);
-      setLocation(selectedLocation);
       setError("");
     } else {
       setFile(null);
       setError("Please select an image file (png or jpeg)");
     }
+  };
 
-    console.log(file);
-    console.log(selectedLocation);
-    console.log(location);
+  const sendData = () => {
+    setSubmitted(true);
+    console.log(submitted);
   };
 
   return (
-    <form>
-      <label>
-        <input type="text" onChange={handleChange} />
-      </label>
-      <label className="file-label">
-        <input className="file-input" type="file" onChange={changeHandler} />
-        <span>+</span>
-      </label>
-      <div className="output">
-        {error && <div className="error">{error}</div>}
-        {file && <div>{file.name}</div>}
-        {file && <ProgressBar file={file} setFile={setFile} location={location} />}
-      </div>
-    </form>
+    <div>
+      <form>
+        <label>
+          Location:{" "}
+          <input type="text" value={location} onChange={handleChange} />
+        </label>
+        <label className="file-label">
+          <input className="file-input" type="file" onChange={changeHandler} />
+          <span>+</span>
+        </label>
+        <div className="output">
+          {error && <div className="error">{error}</div>}
+          {file && <div>{file.name}</div>}
+          {submitted && file && location && (
+            <ProgressBar file={file} setFile={setFile} location={location} />
+          )}
+        </div>
+      </form>
+      <button onClick={sendData}>Submit</button>
+    </div>
   );
 };
 
