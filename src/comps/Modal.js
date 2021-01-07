@@ -16,6 +16,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
+      <div className="location">{selectedImg.location}</div>
       <motion.img
         src={selectedImg.url} //changed from selectedImg to selectedImg.url
         alt="enlarged pic"
@@ -25,7 +26,9 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
         */
       />
       <div className="caption">
-        <Moment unix format="MMM DD, YYYY">{selectedImg.createdAt.seconds}</Moment>
+        <Moment unix format="MMM DD, YYYY">
+          {selectedImg.createdAt.seconds}
+        </Moment>
       </div>
     </motion.div>
   );
