@@ -43,38 +43,38 @@ const UploadForm = () => {
   };
 
   return (
-    <div>
-      <form>
+    <div className="upload-grid">
+      <div className="output">
         <label className="file-label">
           <input className="file-input" type="file" onChange={changeHandler} />
           <span>+</span>
         </label>
+        {file && <div>{file.name}</div>}
+        {error && <div className="error">{error}</div>}
+      </div>
 
-        <div className="output">
-          {file && <div>{file.name}</div>}
-          {error && <div className="error">{error}</div>}
-
-          <div className="location-input">
-            <label className="location-label">
-              Location:{" "}
-              <input type="text" value={location} onChange={handleChange} />
-            </label>
-          </div>
-
-          {submitted && file && location && (
-            <ProgressBar
-              file={file}
-              setFile={setFile}
-              location={location}
-              setLocation={setLocation}
-              setSubmitted={setSubmitted}
-            />
-          )}
+      <div >
+        <div className="location-input">
+          <label className="location-label">
+            Location:{" "}
+            <input type="text" value={location} onChange={handleChange} />
+          </label>
         </div>
-      </form>
+      </div>
+
       <button className="button" onClick={sendData}>
         Submit
       </button>
+
+      {submitted && file && location && (
+        <ProgressBar
+          file={file}
+          setFile={setFile}
+          location={location}
+          setLocation={setLocation}
+          setSubmitted={setSubmitted}
+        />
+      )}
     </div>
   );
 };
