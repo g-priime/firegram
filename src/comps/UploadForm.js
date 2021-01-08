@@ -4,6 +4,7 @@ import ProgressBar from "./ProgressBar";
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
+  const [locError, setLocError] = useState(null);
   const [location, setLocation] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -14,7 +15,7 @@ const UploadForm = () => {
   const handleChange = (event) => {
     selectedLocation = event.target.value;
     setLocation(selectedLocation);
-    setError("");
+    setLocError("");
   };
 
   const changeHandler = (e) => {
@@ -36,7 +37,7 @@ const UploadForm = () => {
       setFile(null);
       setError("Please select an image file (png or jpeg)");
     } else {
-      setError("Please enter a location");
+      setLocError("Please enter a location");
     }
 
     console.log(submitted);
@@ -58,13 +59,12 @@ const UploadForm = () => {
           {error && <div className="error">{error}</div>}
         </div>
 
-        <div>
-          <div className="location-input">
-            <label className="location-label">
-              Location:{" "}
-              <input type="text" value={location} onChange={handleChange} />
-            </label>
-          </div>
+        <div className="location-input">
+          <label className="location-label">
+            Location:{" "}
+            <input type="text" value={location} onChange={handleChange} />
+          </label>
+          {locError && <div className="error">{locError}</div>}
         </div>
 
         <button className="button" onClick={sendData}>
