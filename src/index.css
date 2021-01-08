@@ -70,6 +70,8 @@ label.file-label {
   margin: 10px auto;
   height: 0;
   font-size: 0.8rem;
+
+  text-align: center;
 }
 label.location-label {
   width: 30px;
@@ -86,11 +88,17 @@ label:hover {
 }
 
 .output {
-  
   height: 0;
   font-size: 0.8rem;
+  text-align: center;
 }
 
+.file-name {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 10px;
+
+}
 .error {
   color: var(--error);
   font-size: 0.8rem;
