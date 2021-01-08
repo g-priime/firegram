@@ -46,6 +46,7 @@ const UploadForm = () => {
   return (
     <div className="upload-container">
       <div className="upload-grid">
+
         <div className="output">
           <label className="file-label">
             <input
@@ -55,7 +56,7 @@ const UploadForm = () => {
             />
             <span>+</span>
           </label>
-          {file && <div>{file.name}</div>}
+          {file && <div className="file-name">{file.name}</div>}
           {error && <div className="error">{error}</div>}
         </div>
 
