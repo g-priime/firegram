@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
+//import Button from '@material-ui/core/Button';
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -46,7 +47,6 @@ const UploadForm = () => {
   return (
     <div className="upload-container">
       <div className="upload-grid">
-
         <div className="output">
           <label className="file-label">
             <input
@@ -71,6 +71,13 @@ const UploadForm = () => {
         <button className="button" onClick={sendData}>
           Submit
         </button>
+
+{/*
+        <Button className="button" variant="outlined" color="primary" onClick={sendData}>
+          Primary
+        </Button>
+        */}
+
       </div>
       <div className="progress-container">
         {submitted && file && location && (
