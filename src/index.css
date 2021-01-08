@@ -31,8 +31,14 @@ body {
 }
 
 /* upload form styles */
+.upload-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .upload-grid {
-  margin: 20px auto;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
@@ -74,22 +80,26 @@ label:hover {
   background: var(--primary);
   color: white;
 }
+
 .output {
-  height: 60px;
+  height: 0;
   font-size: 0.8rem;
 }
+
 .error {
   color: var(--error);
 }
 .button {
   margin: 10px auto;
 }
+.progress-container {
+  height: 5px;
+}
 
 /* progress bar styles */
 .progress-bar {
   height: 5px;
   background: var(--primary);
-  margin-top: 100px;
 }
 
 /* image grid styles */
