@@ -70,8 +70,8 @@ const UploadForm = () => {
         <button className="button" onClick={sendData}>
           Submit
         </button>
-
-<div className="progress-container">
+      </div>
+      <div className="progress-container">
         {submitted && file && location && (
           <ProgressBar
             file={file}
@@ -81,7 +81,6 @@ const UploadForm = () => {
             setSubmitted={setSubmitted}
           />
         )}
-        </div>
       </div>
     </div>
   );
