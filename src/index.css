@@ -31,10 +31,18 @@ body {
 }
 
 /* upload form styles */
+.upload-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+/*
 form {
   margin: 30px auto 10px;
   text-align: center;
 }
+*/
 .file-input {
   height: 0;
   width: 0;
@@ -53,11 +61,7 @@ label.file-label {
   font-size: 24px;
 }
 .location-input {
-  position: absolute;
-  top: 39%;
-  left: 40%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 10px auto;
 }
 label.location-label {
   width: 30px;
@@ -78,8 +82,7 @@ label:hover {
   color: var(--error);
 }
 .button {
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin: 10px auto;
 }
 
 /* progress bar styles */
