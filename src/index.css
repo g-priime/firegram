@@ -124,6 +124,23 @@ button:hover {
   background: var(--primary);
   color: white;
 }
+button:focus {
+  margin: 10px auto;
+ 
+  font-size: 0.8rem;
+
+  width: 70px;
+  height: 30px;
+  line-height: 20px;
+  
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid blue;
+  color: blue;
+
+  outline: none; 
+}
 .progress-container {
   height: 5px;
 }
