@@ -82,7 +82,7 @@ label.location-label {
 
   margin: 10px auto;
 }
-label:hover {
+label.file-label:hover {
   background: var(--primary);
   color: white;
 }
@@ -112,9 +112,17 @@ label:hover {
 
   width: 70px;
   height: 30px;
-  line-height: 30px;
-  color: var(--primary);
+  line-height: 20px;
+  
   font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+button:hover {
+  background: var(--primary);
+  color: white;
 }
 .progress-container {
   height: 5px;
