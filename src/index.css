@@ -68,6 +68,8 @@ label.file-label {
 }
 .location-input {
   margin: 10px auto;
+  height: 0;
+  font-size: 0.8rem;
 }
 label.location-label {
   width: 30px;
@@ -75,6 +77,8 @@ label.location-label {
   line-height: 30px;
   color: var(--primary);
   font-weight: bold;
+
+  margin: 10px auto;
 }
 label:hover {
   background: var(--primary);
@@ -82,15 +86,27 @@ label:hover {
 }
 
 .output {
+  
   height: 0;
   font-size: 0.8rem;
 }
 
 .error {
   color: var(--error);
+  font-size: 0.8rem;
+  
+  margin-top: 10px;
 }
 .button {
   margin: 10px auto;
+ 
+  font-size: 0.8rem;
+
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
 }
 .progress-container {
   height: 5px;
