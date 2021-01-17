@@ -1,12 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Moment from "react-moment";
+import deletePic from "../hooks/deletePic";
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
       setSelectedImg(null);
     }
+  };
+
+  const deletePicture = () => {
+    const { fileName } = deletePic(selectedImg.name);
+
+    console.log(fileName)
   };
 
   return (
@@ -30,6 +37,9 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           {selectedImg.createdAt.seconds}
         </Moment>
       </div>
+      <button className="button" onClick={deletePicture}>
+        Delete
+      </button>
     </motion.div>
   );
 };
