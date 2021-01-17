@@ -15,6 +15,8 @@ const useStorage = (file, location) => {
     const storageRef = projectStorage.ref(file.name);
     const collectionRef = projectFirestore.collection("images");
 
+    const fileName = file.name;
+
     storageRef.put(file).on(
       "state_changed",
       (snap) => {
@@ -27,7 +29,7 @@ const useStorage = (file, location) => {
       async () => {
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
-        collectionRef.add({ url, createdAt, location });
+        collectionRef.doc(fileName).set({ name: fileName, url, createdAt, location });
         setUrl(url);
 
         console.log(location);
