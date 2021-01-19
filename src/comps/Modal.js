@@ -25,23 +25,26 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
       animate={{ opacity: 1 }}
     >
       <div className="location">{selectedImg.location}</div>
-      <motion.img
-        src={selectedImg.url} //changed from selectedImg to selectedImg.url
-        alt="enlarged pic"
-        /* 
+      <div className="modal-container">
+        <motion.img
+          src={selectedImg.url} //changed from selectedImg to selectedImg.url
+          alt="enlarged pic"
+          /* 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         */
-      />
-      <div className="caption-grid">
-        <div className="caption">
-          <Moment unix format="MMM DD, YYYY">
-            {selectedImg.createdAt.seconds}
-          </Moment>
+        />
+
+        <div className="caption-grid">
+          <div className="caption">
+            <Moment unix format="MMM DD, YYYY">
+              {selectedImg.createdAt.seconds}
+            </Moment>
+          </div>
+          <button className="button-delete" onClick={deletePicture}>
+            Delete
+          </button>
         </div>
-        <button className="button-delete" onClick={deletePicture}>
-          Delete
-        </button>
       </div>
     </motion.div>
   );
