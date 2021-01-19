@@ -12,8 +12,9 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
   const deletePicture = () => {
     const { fileName } = deletePic(selectedImg.name);
+    setSelectedImg(null);
 
-    console.log(fileName)
+    console.log(fileName);
   };
 
   return (
