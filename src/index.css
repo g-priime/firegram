@@ -200,10 +200,11 @@ button:active {
 
   max-width: 60%;
   
+  
 }
 
 .caption {
-  text-align: center;
+  text-align: left;
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -212,7 +213,7 @@ button:active {
 }
 
 .button-delete {
-  margin: 0px auto;
+  justify-self: right;
 
   font-size: 0.8rem;
 
