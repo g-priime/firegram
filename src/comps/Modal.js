@@ -39,7 +39,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
         </Moment>
       </div>
       <button className="button" onClick={deletePicture}>
-        Delete
+        <span>Delete</span>
       </button>
     </motion.div>
   );
