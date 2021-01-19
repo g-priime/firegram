@@ -130,6 +130,11 @@ button:focus {
 button:active {
   color: blue;
 }
+
+button span {
+  color: black;
+}
+
 .progress-container {
   height: 5px;
 }
