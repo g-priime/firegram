@@ -208,8 +208,7 @@ button:active {
 }
 
 .button-delete {
-  text-align: center;
-  
+  margin: 0px auto;
 
   font-size: 0.8rem;
 
