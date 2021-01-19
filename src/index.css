@@ -173,13 +173,31 @@ button:active {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.modal-container {
+  display: block;
+  max-width: 60vw;
+  max-height: 100vh;
+  
+  margin: 5vh auto;
+  padding-bottom: -20%;
+  border-top: 20%;
+  
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+
+  background: black;
+}
+
 .backdrop img {
   display: block;
-  max-width: 60%;
-  max-height: 80%;
+  max-width: 60vw;
+  max-height: 70vh;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+
+  
 }
 .location {
   text-align: center;
@@ -188,7 +206,7 @@ button:active {
   letter-spacing: 2px;
   font-weight: normal;
   margin-top: 25px;
-  margin-bottom: -50px;
+  margin-bottom: -70px;
 }
 
 .caption-grid {
@@ -198,7 +216,7 @@ button:active {
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
 
-  max-width: 60%;
+  max-width: 60vw;
   
   
 }
