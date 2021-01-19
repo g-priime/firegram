@@ -192,10 +192,14 @@ button:active {
 }
 
 .caption-grid {
+  margin: auto;
   margin-top: -50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+
+  max-width: 60%;
+  
 }
 
 .caption {
