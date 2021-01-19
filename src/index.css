@@ -97,23 +97,22 @@ label.file-label:hover {
   color: var(--error);
   font-size: 0.8rem;
   margin-top: 10px;
-
 }
 .error {
   color: var(--error);
   font-size: 0.8rem;
-  
+
   margin-top: 10px;
 }
 .button {
   margin: 10px auto;
- 
+
   font-size: 0.8rem;
 
   width: 70px;
   height: 30px;
   line-height: 20px;
-  
+
   font-weight: bold;
 
   border-radius: 10px;
@@ -129,10 +128,6 @@ button:focus {
 }
 button:active {
   color: blue;
-}
-
-button span {
-  color: black;
 }
 
 .progress-container {
@@ -195,11 +190,36 @@ button span {
   margin-top: 25px;
   margin-bottom: -50px;
 }
+
+.caption-grid {
+  margin-top: -50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
 .caption {
   text-align: center;
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
-  margin-top: -50px;
+  
+}
+
+.button-delete {
+  text-align: center;
+  
+
+  font-size: 0.8rem;
+
+  width: 70px;
+  height: 30px;
+  line-height: 20px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
