@@ -89,16 +89,14 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             </button>
           </div>
 
-          <div className="caption-grid">
-            <div className="caption">
-              <Moment unix format="MMM DD, YYYY">
-                {selectedImg.createdAt.seconds}
-              </Moment>
-            </div>
-            <button className="button-delete" onClick={deletePicture}>
-              Delete
-            </button>
+          <div className="caption">
+            <Moment unix format="MMM DD, YYYY">
+              {selectedImg.createdAt.seconds}
+            </Moment>
           </div>
+          <button className="button-delete" onClick={deletePicture}>
+            Delete
+          </button>
         </div>
       </div>
     </motion.div>
