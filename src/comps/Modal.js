@@ -66,34 +66,39 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <div className="location">{selectedImg.location}</div>
       <div className="modal-container">
-        <div className="modal-grid">
-          <button className="button-prev" onClick={previousPicture}>
-            Prev
-          </button>
-          <motion.img
-            src={selectedImg.url} //changed from selectedImg to selectedImg.url
-            alt="enlarged pic"
-            /* 
+        <div className="modal-vert-grid">
+          <div className="location">{selectedImg.location}</div>
+
+          <div className="modal-grid">
+            <button className="button-prev" onClick={previousPicture}>
+              Prev
+            </button>
+            <div className="img-container">
+              <motion.img
+                src={selectedImg.url} //changed from selectedImg to selectedImg.url
+                alt="enlarged pic"
+                /* 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         */
-          />
-          <button className="button-next" onClick={nextPicture}>
-            Next
-          </button>
-        </div>
-
-        <div className="caption-grid">
-          <div className="caption">
-            <Moment unix format="MMM DD, YYYY">
-              {selectedImg.createdAt.seconds}
-            </Moment>
+              />
+            </div>
+            <button className="button-next" onClick={nextPicture}>
+              Next
+            </button>
           </div>
-          <button className="button-delete" onClick={deletePicture}>
-            Delete
-          </button>
+
+          <div className="caption-grid">
+            <div className="caption">
+              <Moment unix format="MMM DD, YYYY">
+                {selectedImg.createdAt.seconds}
+              </Moment>
+            </div>
+            <button className="button-delete" onClick={deletePicture}>
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>
