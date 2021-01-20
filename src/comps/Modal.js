@@ -21,6 +21,26 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
   const { docs } = useFirestore("images");
 
+  const previousPicture = () => {
+    const reversedDocs = docs.map(doc => doc).reverse();
+    
+    let found = false;
+
+    let success = reversedDocs.map((doc) => {
+      if (found === true) {
+        setSelectedImg(doc);
+        found = false;
+        return true;
+      }
+      if (doc.id === selectedImg.id) {
+        found = true;
+      }
+      return false;
+    });
+
+    console.log(success);
+  };
+
   const nextPicture = () => {
     let found = false;
 
@@ -68,6 +88,9 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           </button>
         </div>
 
+        <button className="button-next" onClick={previousPicture}>
+          Prev
+        </button>
         <button className="button-next" onClick={nextPicture}>
           Next
         </button>
