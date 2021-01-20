@@ -185,7 +185,7 @@ button:active {
 
 .modal-vert-grid {
   display: grid;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: 10vh 80vh 5vh 5vh;
 }
 
 .modal-grid {
@@ -251,7 +251,7 @@ button:active {
 
   align-self: flex-end;
 }
-
+/*
 .caption-grid {
   margin: auto;
   margin-top: 0;
@@ -262,9 +262,9 @@ button:active {
   max-width: 60vw;
   align-self: start;
 }
-
+*/
 .caption {
-  text-align: left;
+  text-align: center;
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -272,7 +272,7 @@ button:active {
 }
 
 .button-delete {
-  justify-self: right;
+  justify-self: flex-end;
 
   font-size: 0.8rem;
 
