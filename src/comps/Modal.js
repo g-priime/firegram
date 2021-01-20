@@ -22,8 +22,8 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
   const { docs } = useFirestore("images");
 
   const previousPicture = () => {
-    const reversedDocs = docs.map(doc => doc).reverse();
-    
+    const reversedDocs = docs.map((doc) => doc).reverse();
+
     let found = false;
 
     let success = reversedDocs.map((doc) => {
@@ -68,14 +68,22 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
     >
       <div className="location">{selectedImg.location}</div>
       <div className="modal-container">
-        <motion.img
-          src={selectedImg.url} //changed from selectedImg to selectedImg.url
-          alt="enlarged pic"
-          /* 
+        <div className="modal-grid">
+          <button className="button-prev" onClick={previousPicture}>
+            Prev
+          </button>
+          <motion.img
+            src={selectedImg.url} //changed from selectedImg to selectedImg.url
+            alt="enlarged pic"
+            /* 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         */
-        />
+          />
+          <button className="button-next" onClick={nextPicture}>
+            Next
+          </button>
+        </div>
 
         <div className="caption-grid">
           <div className="caption">
@@ -87,13 +95,6 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             Delete
           </button>
         </div>
-
-        <button className="button-next" onClick={previousPicture}>
-          Prev
-        </button>
-        <button className="button-next" onClick={nextPicture}>
-          Next
-        </button>
       </div>
     </motion.div>
   );
