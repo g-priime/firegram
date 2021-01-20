@@ -24,15 +24,19 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
   const nextPicture = () => {
     let found = false;
 
-    docs.map((doc) => {
+    let success = docs.map((doc) => {
       if (found === true) {
         setSelectedImg(doc);
         found = false;
+        return true;
       }
       if (doc.id === selectedImg.id) {
         found = true;
       }
+      return false;
     });
+
+    console.log(success);
   };
 
   return (
