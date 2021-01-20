@@ -183,17 +183,27 @@ button:active {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.modal-vert-grid {
+  display: grid;
+  grid-template-rows: 10vh 80vh 10vh;
+}
+
 .modal-grid {
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 12fr 1fr;
+
+  margin: 0 auto;
+  align-self: center;
 }
 
 .backdrop img {
   display: block;
   max-width: 100%;
-  max-height: 80vh;
-  margin: 60px auto;
+  height: 80vh;
+  margin: 0 auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+
+  align-self: center;
 }
 
 .button-prev {
@@ -236,18 +246,21 @@ button:active {
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
-  margin-top: 25px;
-  margin-bottom: -70px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  align-self: flex-end;
 }
 
 .caption-grid {
   margin: auto;
-  margin-top: -50px;
+  margin-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
 
   max-width: 60vw;
+  align-self: start;
 }
 
 .caption {
