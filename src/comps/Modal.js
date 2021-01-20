@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Moment from "react-moment";
 import deletePic from "../hooks/deletePic";
 
+import useFirestore from "../hooks/useFirestore";
+
 const Modal = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
@@ -15,6 +17,22 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
     setSelectedImg(null);
 
     console.log(fileName);
+  };
+
+  const { docs } = useFirestore("images");
+
+  const nextPicture = () => {
+    let found = false;
+
+    docs.map((doc) => {
+      if (found === true) {
+        setSelectedImg(doc);
+        found = false;
+      }
+      if (doc.id === selectedImg.id) {
+        found = true;
+      }
+    });
   };
 
   return (
@@ -45,6 +63,10 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             Delete
           </button>
         </div>
+
+        <button className="button-next" onClick={nextPicture}>
+          Next
+        </button>
       </div>
     </motion.div>
   );
