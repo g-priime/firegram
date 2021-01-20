@@ -183,16 +183,53 @@ button:active {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+
 .backdrop img {
   display: block;
   max-width: 100%;
   max-height: 80vh;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
-  
-
-  
 }
+
+.button-prev {
+  margin: 0 auto;
+  align-self: center;
+
+  font-size: 0.8rem;
+
+  width: 70px;
+  height: 30px;
+  line-height: 20px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.button-next {
+  margin: 0 auto;
+  align-self: center;
+
+  font-size: 0.8rem;
+
+  width: 70px;
+  height: 30px;
+  line-height: 20px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
 .location {
   text-align: center;
   color: var(--primary);
@@ -211,8 +248,6 @@ button:active {
   grid-gap: 40px;
 
   max-width: 60vw;
-  
-  
 }
 
 .caption {
@@ -221,7 +256,6 @@ button:active {
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
-  
 }
 
 .button-delete {
