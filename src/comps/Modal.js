@@ -6,10 +6,16 @@ import deletePic from "../hooks/deletePic";
 import useFirestore from "../hooks/useFirestore";
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
+  /*
   const handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
       setSelectedImg(null);
     }
+  };
+*/
+
+  const exitModal = () => {
+    setSelectedImg(null);
   };
 
   const deletePicture = () => {
@@ -62,12 +68,17 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
   return (
     <motion.div
       className="backdrop"
+      /*
       onClick={handleClick}
+      */
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
       <div className="modal-container">
         <div className="modal-vert-grid">
+          <button className="button-exit" onClick={exitModal}>
+            X
+          </button>
           <div className="location">{selectedImg.location}</div>
 
           <div className="modal-grid">
@@ -95,7 +106,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             </Moment>
           </div>
           <button className="button-delete" onClick={deletePicture}>
-            Delete
+            D
           </button>
         </div>
       </div>
