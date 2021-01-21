@@ -79,13 +79,13 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           <button className="button-exit" onClick={exitModal}>
             X
           </button>
-          <div className="location">{selectedImg.location}</div>
 
           <div className="modal-grid">
             <button className="button-prev" onClick={previousPicture}>
               P
             </button>
             <div className="img-container">
+              <div className="location">{selectedImg.location}</div>
               <motion.img
                 src={selectedImg.url} //changed from selectedImg to selectedImg.url
                 alt="enlarged pic"
@@ -94,17 +94,17 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
         animate={{ y: 0 }}
         */
               />
+              <div className="caption">
+                <Moment unix format="MMM DD, YYYY">
+                  {selectedImg.createdAt.seconds}
+                </Moment>
+              </div>
             </div>
             <button className="button-next" onClick={nextPicture}>
               N
             </button>
           </div>
 
-          <div className="caption">
-            <Moment unix format="MMM DD, YYYY">
-              {selectedImg.createdAt.seconds}
-            </Moment>
-          </div>
           <button className="button-delete" onClick={deletePicture}>
             D
           </button>
