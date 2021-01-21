@@ -106,7 +106,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           </div>
 
           <button className="button-delete" onClick={deletePicture}>
-            D
+          <i class="far fa-trash-alt"></i>
           </button>
         </div>
       </div>
