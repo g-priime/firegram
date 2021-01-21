@@ -185,7 +185,7 @@ button:active {
 
 .modal-vert-grid {
   display: grid;
-  grid-template-rows: 10vh 80vh 5vh 5vh;
+  grid-template-rows: 5vh 5vh 80vh 5vh 5vh;
 }
 
 .modal-grid {
@@ -198,42 +198,12 @@ button:active {
   width: 100%;
 }
 
-.backdrop img {
-  display: block;
-  max-width: 100%;
-  max-height: 80vh;
-  margin: 0 auto;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
-
-  align-self: center;
-}
-
-.button-prev {
-  
-  align-self: center;
-  justify-self: start;
+.button-exit {
+  justify-self: flex-start;
 
   font-size: 0.8rem;
 
-  width: 30px;
-  height: 30px;
-  line-height: 20px;
-
-  font-weight: bold;
-
-  border-radius: 10px;
-  border: 1px solid var(--primary);
-  color: var(--primary);
-}
-
-.button-next {
-  
-  align-self: center;
-  justify-self: end;
-
-  font-size: 0.8rem;
-
-  width: 30px;
+  width: 70px;
   height: 30px;
   line-height: 20px;
 
@@ -255,6 +225,51 @@ button:active {
 
   align-self: flex-end;
 }
+
+.backdrop img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+
+  align-self: center;
+}
+
+.button-prev {
+  align-self: center;
+  justify-self: start;
+
+  font-size: 0.8rem;
+
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.button-next {
+  align-self: center;
+  justify-self: end;
+
+  font-size: 0.8rem;
+
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
 /*
 .caption-grid {
   margin: auto;
