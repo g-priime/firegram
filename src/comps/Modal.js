@@ -72,7 +72,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
           <div className="modal-grid">
             <button className="button-prev" onClick={previousPicture}>
-              Prev
+              P
             </button>
             <div className="img-container">
               <motion.img
@@ -85,7 +85,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
               />
             </div>
             <button className="button-next" onClick={nextPicture}>
-              Next
+              N
             </button>
           </div>
 
