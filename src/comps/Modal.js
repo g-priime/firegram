@@ -82,7 +82,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
           <div className="modal-grid">
             <button className="button-prev" onClick={previousPicture}>
-              P
+              <i class="fas fa-chevron-left"></i>
             </button>
             <div className="img-container">
               <div className="location">{selectedImg.location}</div>
@@ -101,12 +101,12 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
               </div>
             </div>
             <button className="button-next" onClick={nextPicture}>
-              N
+              <i class="fas fa-chevron-left"></i>
             </button>
           </div>
 
           <button className="button-delete" onClick={deletePicture}>
-          <i class="far fa-trash-alt"></i>
+            <i class="far fa-trash-alt"></i>
           </button>
         </div>
       </div>
