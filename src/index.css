@@ -185,7 +185,7 @@ button:active {
 
 .modal-vert-grid {
   display: grid;
-  grid-template-rows: 5vh 5vh 80vh 5vh 5vh;
+  grid-template-rows: 8vh 80vh 8vh;
 }
 
 .modal-grid {
@@ -291,7 +291,8 @@ button:active {
 }
 
 .button-delete {
-  justify-self: flex-end;
+  justify-self: end;
+  align-self: end;
 
   font-size: 0.8rem;
 
