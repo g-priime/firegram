@@ -294,15 +294,16 @@ button:active {
   justify-self: end;
   align-self: end;
 
-  font-size: 0.8rem;
+  font-size: 1.6rem;
 
-  width: 70px;
-  height: 30px;
-  line-height: 20px;
+  height: 40px;
 
   font-weight: bold;
 
   border-radius: 10px;
-  border: 1px solid var(--primary);
+
   color: var(--primary);
+
+  background: transparent;
+  border: none;
 }
