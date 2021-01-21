@@ -253,6 +253,7 @@ button:active {
 .button-prev:hover {
   font-size: 1.6rem;
   background: transparent;
+  color: var(--primary);
 }
 
 .button-next {
@@ -268,6 +269,7 @@ button:active {
 .button-next:hover {
   font-size: 1.6rem;
   background: transparent;
+  color: var(--primary);
 }
 
 /*
