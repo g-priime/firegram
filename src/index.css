@@ -251,12 +251,7 @@ button:active {
 }
 
 .button-prev:hover {
-  font-size: 0.8rem;
-  background: transparent;
-}
-
-.button-next:hover {
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   background: transparent;
 }
 
@@ -268,6 +263,11 @@ button:active {
 
   background: transparent;
   border: none;
+}
+
+.button-next:hover {
+  font-size: 1.6rem;
+  background: transparent;
 }
 
 /*
