@@ -201,17 +201,21 @@ button:active {
 .button-exit {
   justify-self: flex-start;
 
-  font-size: 0.8rem;
+  font-size: 1.6rem;
 
-  width: 70px;
   height: 30px;
   line-height: 20px;
 
   font-weight: bold;
 
-  border-radius: 10px;
+  background: transparent;
   border: 1px solid var(--primary);
-  color: var(--primary);
+}
+
+.button-exit:hover {
+  font-size: 1.6rem;
+  background: var(--primary);
+  color: black;
 }
 
 .location {
