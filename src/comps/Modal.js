@@ -101,7 +101,7 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
               </div>
             </div>
             <button className="button-next" onClick={nextPicture}>
-              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
             </button>
           </div>
 
