@@ -308,4 +308,6 @@ button:active {
 
   background: transparent;
   border: none;
+
+  visibility: hidden; /* this removes display and functionality of delete button */
 }
