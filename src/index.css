@@ -40,8 +40,8 @@ body {
 .upload-grid {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 /*
 form {
@@ -60,14 +60,14 @@ label.file-label {
   height: 30px;
   border: 1px solid var(--primary);
   border-radius: 50%;
-  margin: 10px auto;
+  margin: 0 auto;
   line-height: 30px;
   color: var(--primary);
   font-weight: bold;
   font-size: 24px;
 }
 .location-input {
-  margin: 10px auto;
+  margin: 0 auto;
   height: 0;
   font-size: 0.8rem;
 
@@ -96,13 +96,13 @@ label.file-label:hover {
 .file-name {
   color: var(--error);
   font-size: 0.8rem;
-  margin-top: 10px;
+  margin-top: 0;
 }
 .error {
   color: var(--error);
   font-size: 0.8rem;
 
-  margin-top: 10px;
+  margin-top: 0;
 }
 .button {
   margin: 10px auto;
