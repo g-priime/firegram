@@ -84,9 +84,11 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             <div className="img-container">
               <div className="location">{selectedImg.location}</div>
               <div className="img-inner-container">
-                <button className="button-prev" onClick={previousPicture}>
+                <motion.button className="button-prev" onClick={previousPicture}
+                
+                >
                   <i class="fas fa-chevron-left"></i>
-                </button>
+                </motion.button>
                 <button className="button-next" onClick={nextPicture}>
                   <i class="fas fa-chevron-right"></i>
                 </button>
