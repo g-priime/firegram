@@ -265,6 +265,14 @@ button:active {
   color: var(--primary);
 }
 
+.button-prev:focus {
+  font-size: 0;
+}
+
+.button-prev:active {
+  color: blue;
+}
+
 .button-next {
   position: absolute;
   left: 50vw;
@@ -282,6 +290,14 @@ button:active {
   font-size: 1.6rem;
   background: transparent;
   color: var(--primary);
+}
+
+.button-next:focus {
+  font-size: 0;
+}
+
+.button-next:active {
+  color: blue;
 }
 
 /*
