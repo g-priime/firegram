@@ -190,7 +190,7 @@ button:active {
 
 .modal-grid {
   display: grid;
-  grid-template-columns: 1fr 12fr 1fr;
+  grid-template-columns: 12fr;
 
   margin: 0 auto;
   align-self: center;
@@ -228,6 +228,11 @@ button:active {
   margin-bottom: 0;
 
   align-self: flex-end;
+}
+
+.img-inner-container {
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
 }
 
 .backdrop img {
