@@ -84,14 +84,24 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
             <div className="img-container">
               <div className="location">{selectedImg.location}</div>
               <div className="img-inner-container">
-                <motion.button className="button-prev" onClick={previousPicture}
-                
+                <motion.button
+                  className="button-prev"
+                  onClick={previousPicture}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{ delay: 3 }}
                 >
                   <i class="fas fa-chevron-left"></i>
                 </motion.button>
-                <button className="button-next" onClick={nextPicture}>
+                <motion.button
+                  className="button-next"
+                  onClick={nextPicture}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{ delay: 3 }}
+                >
                   <i class="fas fa-chevron-right"></i>
-                </button>
+                </motion.button>
                 <motion.img
                   src={selectedImg.url} //changed from selectedImg to selectedImg.url
                   alt="enlarged pic"
