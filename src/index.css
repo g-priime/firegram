@@ -250,54 +250,46 @@ button:active {
   position: absolute;
   left: 0;
 
-  font-size: 0;
+  font-size: 3rem;
 
   width: 50%;
   height: 100%;
 
   background: transparent;
   border: none;
-}
 
-.button-prev:hover {
-  font-size: 1.6rem;
-  background: transparent;
+  text-align: left;
+
   color: var(--primary);
 }
 
-.button-prev:focus {
-  font-size: 0;
-}
-
-.button-prev:active {
-  color: blue;
+.button-prev:hover {
+  font-size: 3rem;
+  background: transparent;
+  color: var(--primary);
 }
 
 .button-next {
   position: absolute;
   left: 50vw;
   
-  font-size: 0;
+  font-size: 3rem;
 
   width: 50%;
   height: 100%;
 
   background: transparent;
   border: none;
-}
 
-.button-next:hover {
-  font-size: 1.6rem;
-  background: transparent;
+  text-align: right;
+
   color: var(--primary);
 }
 
-.button-next:focus {
-  font-size: 0;
-}
-
-.button-next:active {
-  color: blue;
+.button-next:hover {
+  font-size: 3rem;
+  background: transparent;
+  color: var(--primary);
 }
 
 /*
