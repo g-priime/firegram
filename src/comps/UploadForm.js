@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
+//import Button from '@material-ui/core/Button';
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [locError, setLocError] = useState(null);
+  const [location, setLocation] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const types = ["image/png", "image/jpeg"];
 
-  let selectedLocation = "";
+  let selectedLocation = null;
 
   const handleChange = (event) => {
     selectedLocation = event.target.value;
-
-    console.log(selectedLocation);
+    setLocation(selectedLocation);
+    setLocError("");
   };
 
   const changeHandler = (e) => {
@@ -21,33 +24,73 @@ const UploadForm = () => {
 
     if (selected && types.includes(selected.type)) {
       setFile(selected);
-      setLocation(selectedLocation);
       setError("");
     } else {
       setFile(null);
       setError("Please select an image file (png or jpeg)");
     }
+  };
 
-    console.log(file);
-    console.log(selectedLocation);
-    console.log(location);
+  const sendData = () => {
+    if (file && location) {
+      setSubmitted(true);
+    } else if (!file) {
+      setFile(null);
+      setError("Please select an image file (png or jpeg)");
+    } else {
+      setLocError("Please enter a location");
+    }
+
+    console.log(submitted);
   };
 
   return (
-    <form>
-      <label>
-        <input type="text" onChange={handleChange} />
-      </label>
-      <label className="file-label">
-        <input className="file-input" type="file" onChange={changeHandler} />
-        <span>+</span>
-      </label>
-      <div className="output">
-        {error && <div className="error">{error}</div>}
-        {file && <div>{file.name}</div>}
-        {file && <ProgressBar file={file} setFile={setFile} location={location} />}
+    <div className="upload-container">
+      <div className="upload-grid">
+        <div className="output">
+          <label className="file-label">
+            <input
+              className="file-input"
+              type="file"
+              onChange={changeHandler}
+            />
+            <span>+</span>
+          </label>
+          {file && <div className="file-name">{file.name}</div>}
+          {error && <div className="error">{error}</div>}
+        </div>
+
+        <div className="location-input">
+          <label className="location-label">
+            Location:{" "}
+            <input type="text" value={location} onChange={handleChange} />
+          </label>
+          {locError && <div className="error">{locError}</div>}
+        </div>
+
+        <button className="button" onClick={sendData}>
+          Submit
+        </button>
+
+{/*
+        <Button className="button" variant="outlined" color="primary" onClick={sendData}>
+          Primary
+        </Button>
+        */}
+
       </div>
-    </form>
+      <div className="progress-container">
+        {submitted && file && location && (
+          <ProgressBar
+            file={file}
+            setFile={setFile}
+            location={location}
+            setLocation={setLocation}
+            setSubmitted={setSubmitted}
+          />
+        )}
+      </div>
+    </div>
   );
 };
 
