@@ -81,28 +81,32 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           </button>
 
           <div className="modal-grid">
-            <button className="button-prev" onClick={previousPicture}>
-              <i class="fas fa-chevron-left"></i>
-            </button>
+            
             <div className="img-container">
               <div className="location">{selectedImg.location}</div>
-              <motion.img
-                src={selectedImg.url} //changed from selectedImg to selectedImg.url
-                alt="enlarged pic"
-                /* 
+              <div className="img-inner-container">
+                <button className="button-prev" onClick={previousPicture}>
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <motion.img
+                  src={selectedImg.url} //changed from selectedImg to selectedImg.url
+                  alt="enlarged pic"
+                  /* 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         */
-              />
+                />
+                <button className="button-next" onClick={nextPicture}>
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
               <div className="caption">
                 <Moment unix format="MMM DD, YYYY">
                   {selectedImg.createdAt.seconds}
                 </Moment>
               </div>
             </div>
-            <button className="button-next" onClick={nextPicture}>
-              <i class="fas fa-chevron-right"></i>
-            </button>
+            
           </div>
 
           <button className="button-delete" onClick={deletePicture}>
