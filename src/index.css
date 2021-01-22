@@ -190,7 +190,7 @@ button:active {
 
 .modal-grid {
   display: grid;
-  grid-template-columns: 1fr 12fr 1fr;
+  grid-template-columns: 12fr;
 
   margin: 0 auto;
   align-self: center;
@@ -230,44 +230,64 @@ button:active {
   align-self: flex-end;
 }
 
+.img-inner-container {
+  position: relative;
+}
+
 .backdrop img {
   display: block;
-  max-width: 100%;
+  max-width: 100vw;
   max-height: 80vh;
   margin: 0 auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
 
   align-self: center;
+
+  overflow: hidden;
 }
 
 .button-prev {
-  font-size: 0;
+  position: absolute;
+  left: 0;
 
-  width: 100%;
+  font-size: 3rem;
+
+  width: 50%;
   height: 100%;
 
   background: transparent;
   border: none;
+
+  text-align: left;
+
+  color: var(--primary);
 }
 
 .button-prev:hover {
-  font-size: 1.6rem;
+  font-size: 3rem;
   background: transparent;
   color: var(--primary);
 }
 
 .button-next {
-  font-size: 0;
+  position: absolute;
+  left: 50vw;
+  
+  font-size: 3rem;
 
-  width: 100%;
+  width: 50%;
   height: 100%;
 
   background: transparent;
   border: none;
+
+  text-align: right;
+
+  color: var(--primary);
 }
 
 .button-next:hover {
-  font-size: 1.6rem;
+  font-size: 3rem;
   background: transparent;
   color: var(--primary);
 }

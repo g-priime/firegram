@@ -81,28 +81,42 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
           </button>
 
           <div className="modal-grid">
-            <button className="button-prev" onClick={previousPicture}>
-              <i class="fas fa-chevron-left"></i>
-            </button>
             <div className="img-container">
               <div className="location">{selectedImg.location}</div>
-              <motion.img
-                src={selectedImg.url} //changed from selectedImg to selectedImg.url
-                alt="enlarged pic"
-                /* 
+              <div className="img-inner-container">
+                <motion.button
+                  className="button-prev"
+                  onClick={previousPicture}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{ delay: 3 }}
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </motion.button>
+                <motion.button
+                  className="button-next"
+                  onClick={nextPicture}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{ delay: 3 }}
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </motion.button>
+                <motion.img
+                  src={selectedImg.url} //changed from selectedImg to selectedImg.url
+                  alt="enlarged pic"
+                  /* 
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         */
-              />
+                />
+              </div>
               <div className="caption">
                 <Moment unix format="MMM DD, YYYY">
                   {selectedImg.createdAt.seconds}
                 </Moment>
               </div>
             </div>
-            <button className="button-next" onClick={nextPicture}>
-              <i class="fas fa-chevron-right"></i>
-            </button>
           </div>
 
           <button className="button-delete" onClick={deletePicture}>
