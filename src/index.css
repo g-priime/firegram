@@ -41,7 +41,7 @@ body {
   margin-bottom: 20px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 30px;
 }
 /*
 form {
@@ -105,7 +105,7 @@ label.file-label:hover {
   margin-top: 0;
 }
 .button {
-  margin: 10px auto;
+  margin: 0 auto;
 
   font-size: 0.8rem;
 
