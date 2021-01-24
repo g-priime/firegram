@@ -8,6 +8,7 @@ const ProgressBar = ({
   location,
   setLocation,
   setSubmitted,
+  setShowForm
 }) => {
   const { url, progress } = useStorage(file, location);
 
@@ -16,8 +17,9 @@ const ProgressBar = ({
       setFile(null);
       setLocation("");
       setSubmitted(false);
+      setShowForm(false);
     }
-  }, [url, setFile, setLocation, setSubmitted]);
+  }, [url, setFile, setLocation, setSubmitted, setShowForm]);
 
   return (
     <motion.div
