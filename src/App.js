@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      {showForm && <UploadForm />} {/* comment out to remove upload ability */}
+      {showForm && <UploadForm setShowForm={setShowForm} />} {/* comment out to remove upload ability */}
       {!showForm && <button onClick={handleClick}>Add Photo</button>}
       <ImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
