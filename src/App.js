@@ -7,13 +7,21 @@ import UploadForm from "./comps/UploadForm";
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
 
+  const [showForm, setShowForm] = useState(false);
+
+  const handleClick = () => {
+    setShowForm(true);
+  };
+
   return (
     <div className="App">
       <Title />
-      <UploadForm /> {/* comment out to remove upload ability */}
+      {showForm && <UploadForm />} {/* comment out to remove upload ability */}
+      {!showForm && <button onClick={handleClick}>Add Photo</button>}
       <ImageGrid setSelectedImg={setSelectedImg} />
-      { selectedImg && <Modal selectedImg={selectedImg}
-      setSelectedImg={setSelectedImg} /> }
+      {selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
     </div>
   );
 }
