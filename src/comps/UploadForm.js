@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 //import Button from '@material-ui/core/Button';
 
-const UploadForm = () => {
+const UploadForm = ({ setShowForm }) => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
   const [locError, setLocError] = useState(null);
@@ -34,6 +34,7 @@ const UploadForm = () => {
   const sendData = () => {
     if (file && location) {
       setSubmitted(true);
+      
     } else if (!file) {
       setFile(null);
       setError("Please select an image file (png or jpeg)");
@@ -72,12 +73,11 @@ const UploadForm = () => {
           Submit
         </button>
 
-{/*
+        {/*
         <Button className="button" variant="outlined" color="primary" onClick={sendData}>
           Primary
         </Button>
         */}
-
       </div>
       <div className="progress-container">
         {submitted && file && location && (
@@ -87,6 +87,7 @@ const UploadForm = () => {
             location={location}
             setLocation={setLocation}
             setSubmitted={setSubmitted}
+            setShowForm={setShowForm}
           />
         )}
       </div>
