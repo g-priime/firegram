@@ -9,15 +9,13 @@ function App() {
 
   const [showForm, setShowForm] = useState(false);
 
-  const handleClick = () => {
-    setShowForm(true);
-  };
+  
 
   return (
     <div className="App">
-      <Title />
+      <Title setShowForm={setShowForm} />
       {showForm && <UploadForm setShowForm={setShowForm} />} {/* comment out to remove upload ability */}
-      {!showForm && <button onClick={handleClick}>Add Photo</button>}
+      
       <ImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
