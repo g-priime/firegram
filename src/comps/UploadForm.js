@@ -44,10 +44,17 @@ const UploadForm = ({ setShowForm }) => {
     console.log(submitted);
   };
 
+  const exitForm = () => {
+    setShowForm(false);
+  };
+
   return (
     <div className="backdrop">
       <div className="upload-container">
         <div className="upload-grid">
+          <button className="button-exit" onClick={exitForm}>
+            X
+          </button>
           <div className="output">
             <label className="file-label">
               <input
