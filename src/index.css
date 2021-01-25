@@ -58,13 +58,17 @@ body {
 .upload-container {
   
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 40px;
 
   max-width: 959px;
-  margin: auto;
+  
   padding-top: 25vh;
   border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -15vh;
 }
 .upload-grid {
   
@@ -75,6 +79,7 @@ body {
   
   background: var(--secondary);
   
+  max-height: 70vh;
   
 }
 /*
