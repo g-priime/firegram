@@ -85,18 +85,18 @@ const UploadForm = ({ setShowForm }) => {
           Primary
         </Button>
         */}
-        </div>
-        <div className="progress-container">
-          {submitted && file && location && (
-            <ProgressBar
-              file={file}
-              setFile={setFile}
-              location={location}
-              setLocation={setLocation}
-              setSubmitted={setSubmitted}
-              setShowForm={setShowForm}
-            />
-          )}
+          <div className="progress-container">
+            {submitted && file && location && (
+              <ProgressBar
+                file={file}
+                setFile={setFile}
+                location={location}
+                setLocation={setLocation}
+                setSubmitted={setSubmitted}
+                setShowForm={setShowForm}
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
