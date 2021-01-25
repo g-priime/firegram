@@ -34,7 +34,6 @@ const UploadForm = ({ setShowForm }) => {
   const sendData = () => {
     if (file && location) {
       setSubmitted(true);
-      
     } else if (!file) {
       setFile(null);
       setError("Please select an image file (png or jpeg)");
@@ -46,50 +45,52 @@ const UploadForm = ({ setShowForm }) => {
   };
 
   return (
-    <div className="upload-container">
-      <div className="upload-grid">
-        <div className="output">
-          <label className="file-label">
-            <input
-              className="file-input"
-              type="file"
-              onChange={changeHandler}
-            />
-            <span>+</span>
-          </label>
-          {file && <div className="file-name">{file.name}</div>}
-          {error && <div className="error">{error}</div>}
-        </div>
+    <div className="backdrop">
+      <div className="upload-container">
+        <div className="upload-grid">
+          <div className="output">
+            <label className="file-label">
+              <input
+                className="file-input"
+                type="file"
+                onChange={changeHandler}
+              />
+              <span>+</span>
+            </label>
+            {file && <div className="file-name">{file.name}</div>}
+            {error && <div className="error">{error}</div>}
+          </div>
 
-        <div className="location-input">
-          <label className="location-label">
-            Location:{" "}
-            <input type="text" value={location} onChange={handleChange} />
-          </label>
-          {locError && <div className="error">{locError}</div>}
-        </div>
+          <div className="location-input">
+            <label className="location-label">
+              Location:{" "}
+              <input type="text" value={location} onChange={handleChange} />
+            </label>
+            {locError && <div className="error">{locError}</div>}
+          </div>
 
-        <button className="button" onClick={sendData}>
-          Submit
-        </button>
+          <button className="button" onClick={sendData}>
+            Submit
+          </button>
 
-        {/*
+          {/*
         <Button className="button" variant="outlined" color="primary" onClick={sendData}>
           Primary
         </Button>
         */}
-      </div>
-      <div className="progress-container">
-        {submitted && file && location && (
-          <ProgressBar
-            file={file}
-            setFile={setFile}
-            location={location}
-            setLocation={setLocation}
-            setSubmitted={setSubmitted}
-            setShowForm={setShowForm}
-          />
-        )}
+        </div>
+        <div className="progress-container">
+          {submitted && file && location && (
+            <ProgressBar
+              file={file}
+              setFile={setFile}
+              location={location}
+              setLocation={setLocation}
+              setSubmitted={setSubmitted}
+              setShowForm={setShowForm}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
